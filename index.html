@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS 3 Basic Animation</title>
+</head>
+
+<style type="text/css">
+body{
+	background-image: url("home.png");
+	background-color: #6699ff;
+	overflow: hidden;
+}
+
+.background{
+position: absolute; 
+left: 0px;
+top: 70px;
+}
+
+.main-image{
+	position: absolute; 
+	left: 50%;
+	top: 50%;
+   width: 300px; 
+   height: 300px;	
+	margin-left: -150px;
+	margin-top: -150px;	 
+	animation: bounce 5s infinite;
+   z-index: 5;
+}
+
+.circle-1{
+	position: absolute; 
+	left: 50%;
+	top: 50%;
+   width: 400px; 
+   height: 4000px;	
+	margin-left: -200px;
+	margin-top: -200px;	  
+   z-index: 1;
+}
+
+.box1 {	
+	position: absolute; 
+	left: 20%;
+	top: 40%;
+   width: 350px; 
+   height: 350px;	
+	margin-left: -175px;
+	margin-top: -175px;	
+   animation: rotasi 30s infinite;
+   z-index: 0;
+}
+
+.box2 {	
+	position: absolute; 
+	left: 10%;
+	top: 70%;
+   width: 350px; 
+   height: 350px;	
+	margin-left: -175px;
+	margin-top: -175px;	
+   animation: rotasi 30s infinite;
+   z-index: 0;
+}
+
+.box3 {	
+	position: absolute; 
+	left: 50%;
+	top: 50%;
+   width: 380px; 
+   height: 380px;	
+	margin-left: -190px;
+	margin-top: -190px;
+   animation: rotasikanan 5s infinite;
+   z-index: 1;
+}
+
+.box4 {	
+	position: absolute; 
+	left: 50%;
+	top: 50%;
+   width: 400px; 
+   height: 400px;	
+	margin-left: -200px;
+	margin-top: -200px;	
+   animation: rotasikanan 4s infinite;
+   z-index: 3;
+}
+
+.box5 {	
+	position: absolute; 
+	left: 50%;
+	top: 110%;
+   width: 200px; 
+   height: 200px;	
+	margin-left: -400px;
+	margin-top: -400px;	
+   animation: flip 5s infinite;
+   z-index: 0;
+}
+
+.box6 {	
+	position: absolute; 
+	left: 5%;
+	top: 10%;
+   width: 500px; 
+   height: 500px;	
+	margin-left: -200px;
+	margin-top: -100px;	
+   animation: opacity 2s infinite;
+   z-index: 0;
+}
+
+.text{
+	position: absolute;
+	right: 50px;
+	bottom: 50px;
+	color: white;
+	font-family: Harlow Solid Italic;
+	font-size: 20px;
+	animation: popup 30s infinite;
+   z-index: 0;
+}
+
+@keyframes bounce {
+   0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+   animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+  }
+  90% {
+    transform: translateY(0);
+   animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes rotasi {
+  0% {
+   transform:rotate(0deg);  
+  }
+
+  100% {
+    transform:rotate(360deg);  
+  }
+}
+
+@keyframes rotasikanan {
+  0% {
+   transform:rotate(0deg);  
+  }
+  60% {
+   	transform:rotate(180deg);  
+  }
+  100% {
+    transform:rotate(360deg);  
+  }
+}
+
+@keyframes flip {
+ 0% {
+    transform: scale(1) rotateY(0);
+  }
+  50% {
+    transform: scale(2.5) rotateY(90deg);
+  }
+  100% {
+    transform: scale(1) rotateY(180deg);
+  }
+}
+
+@keyframes popup {
+ 0% {
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    transform: translateY(-50px);
+    transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes opacity {
+ 0% {opacity: 1;}
+10% {opacity: 0.5;}
+25% {opacity: 1;}
+50% {opacity: 0.25;}
+75% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+
+
+</style>
+
+
+<body>
+<img src="home.svg" alt="" class="background">
+<img src="center_image.svg" alt="" class="main-image">
+
+
+<img src="gear.svg" alt="" class="box1">
+<img src="gear1.svg" alt="" class="box2">
+<img src="half_circle_2.svg" alt="" class="box3">
+<img src="half_circle_3.svg" alt="" class="box4">
+<img src="gear2.svg" alt="" class="box5">
+<img src="gear3.svg" alt="" class="box6">
+
+<div class="text">
+Just because something doesn’t do what you planned <br>it to do doesn’t mean it’s useless.
+<br>
+–Thomas Edison
+</div>
+
+</body>
+
+</html>
